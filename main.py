@@ -18,6 +18,10 @@ import threading
 
 
 if __name__ == '__main__':
+    """
+    Calls both program1 and program2 in separate threads.
+    Takes inputs from config/inputs.json
+    """
     # read inputs file
     input_file = "config/inputs.json"
     with open(input_file) as input_data:

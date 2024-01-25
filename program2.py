@@ -13,7 +13,7 @@ import unittest
 
 
 class Integer:
-
+    """This class takes an integer and sees if it is a palindrome"""
     def __init__(self, integer):
         self.integer = integer
 
@@ -21,6 +21,7 @@ class Integer:
         return f"n=Integer({self.integer})"
 
     def palindrome_check(self):
+        """Check if integer is a palindrome"""
         if str(self.integer) == str(self.integer)[::-1]:
             result = f"{self.integer} is a palindrome"
         else:
@@ -30,11 +31,16 @@ class Integer:
 
 
 def run_program2(integer):
+    """
+    Creates an Integer class object and checks if the
+    integer is a palindrome
+    """
     my_int = Integer(integer)
     return my_int.palindrome_check()
 
 
 class Program2Tests(unittest.TestCase):
+    """Unit tests class"""
     def test_palindrome(self):
         self.assertEqual(run_program2(121),
                          "121 is a palindrome")

@@ -15,6 +15,11 @@ import unittest
 
 
 def run_program1(binary_string):
+    """
+    Splits the binary_string and checks to see if
+    it is divisible by 5. Returns a binary sequence of
+    those binary numbers divisible by 5
+    """
     bin_seq_list = binary_string.split(",")
     divisible_by_five_list = [
         seq for seq in bin_seq_list
@@ -29,6 +34,7 @@ def run_program1(binary_string):
 
 
 class Program1Tests(unittest.TestCase):
+    """Unit test class"""
     def test_divisible(self):
         self.assertEqual(run_program1(
             "0011,1010,1011"), "1010")
